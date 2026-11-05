@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  /* 제도지 · 잉크 · 기판 · 표시등 */
+  --paper: #dce0d5;
+  --sheet: #f1f2ec;
+  --ink: #1d2330;
+  --ink-soft: #4a5263;
+  --rule: #a9b3a3;
+  --pcb: #23604a;
+  --pcb-deep: #184535;
+  --led-amber: #f0b429;
+  --led-red: #c8371d;
+
+  --font-pixel: 'Galmuri11', 'Galmuri9', 'IBM Plex Sans KR', sans-serif;
+  --font-body: 'IBM Plex Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+  --font-code: 'IBM Plex Mono', Consolas, monospace;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--paper);
+  /* 5mm 모눈 */
+  background-image:
+    linear-gradient(rgba(29, 35, 48, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 35, 48, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--led-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
